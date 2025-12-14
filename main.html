@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Official website of LOKU MD - Connect with our WhatsApp Channel, YouTube, and more." />
+  <meta name="author" content="Nethmika Kaushalya" />
+  <title>LOKU MD - Official Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/administrator-male.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      z-index: -1;
+    }
+
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader span {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ccc;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0.3; }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.7); /* semi-dark navy */
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 420px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #e0e7ff;
+      font-weight: 500;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      margin: 10px 0;
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    .btn img {
+      width: 22px;
+      height: 22px;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 30px 20px;
+      }
+
+      .btn {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <span>Loading LOKU MD...</span>
+</div>
+
+<div id="particles-js"></div>
+
+<div class="container" id="main-content" style="display: none;">
+  <div class="card">
+    <h1>LOKU MD</h1>
+    <p>OFFICIAL WEBSITE</p>
+
+    <a href="https://whatsapp.com/channel/yourchannel" class="btn" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WA Icon"/> WhatsApp Channel
+    </a>
+
+    <a href="https://youtube.com/@YourChannel" class="btn" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/FF0000/youtube-play.png" alt="YT Icon"/> YouTube Channel
+    </a>
+
+    <a href="/pair" class="btn">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/link.png" alt="Link Icon"/> Pairing Site
+    </a>
+
+    <a href="https://github.com/Nethmika-LK/LOKU-MD" class="btn" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub Icon"/> Repository
+    </a>
+  </div>
+
+  <footer>© 2025 LOKU MD. All rights reserved.</footer>
+</div>
+
+<!-- Particles.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 70 },
+      size: { value: 3 },
+      color: { value: "#3b82f6" }, // blue particles
+      line_linked: {
+        enable: true,
+        distance: 120,
+        color: "#60a5fa",
+        opacity: 0.5,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2
+      }
+    }
+  });
+
+  // Loader delay
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main-content").style.display = "flex";
+    }, 1200);
+  });
+</script>
+
+</body>
+</html>
